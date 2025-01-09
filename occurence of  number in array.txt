@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int add=1;
+    int n;
+    bool counted[n] = {false};
+    cout<<" Length: ";
+    cin>>n;
+    int arr[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+       
+        if (counted[i]) {
+            continue; }
+    
+      add=1;
+       for(int j=i+1;j<n;j++)
+       {
+        
+        if(arr[i]==arr[j])
+        {
+        add++;
+         counted[j] = true; 
+       }
+       }
+       cout<<"occurance of" <<arr[i] <<" is" <<add<<endl;
+     
+    }
+}
+    

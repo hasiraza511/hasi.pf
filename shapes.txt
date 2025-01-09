@@ -1,0 +1,102 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,num1;
+     int choice;
+    start:
+     cout<<"Press 1 to show pattern of equilateral triangle: "<<endl;
+     cout<<"Press 2 to show pattern of Right  triangle from left: "<<endl;
+     cout<<"Press 3 to show pattern of right triangle from right: "<<endl;
+     cin>>choice;
+     
+     if(choice==1)
+     {
+
+    cout<<"Enter Number of rows: ";
+    cin>>num;
+    cout<<"Number of shapes: ";
+    cin>>num1;
+   for(int i=1;i<=num1;i++)
+   {
+    for(int i=1;i<=num;i++)
+    {
+    for(int j= num-i;j>=1;j--)
+    {
+        cout<<" ";
+    }
+    for(int k=1;k<=(2*i-1);k++)
+    {
+    cout<<"*";
+    }
+
+
+cout<<endl;
+
+    }
+
+cout<<"\t\t"<<endl;
+   }
+   system("pause");
+   goto start;
+     }
+
+ if(choice==3)
+     {
+
+    cout<<"Enter Number of rows: ";
+    cin>>num;
+    cout<<"Number of shapes: ";
+    cin>>num1;
+   for(int i=1;i<=num1;i++)
+   {
+    for(int i=1;i<=num;i++)
+    {
+    for(int j= num-i;j>=1;j--)
+    {
+        cout<<" ";
+    }
+    for(int k=1;k<=i;k++)
+    {
+    cout<<"*";
+    }
+
+
+cout<<endl;
+
+    }
+
+cout<<"\t\t"<<endl;
+   }
+    system("pause");
+   goto start;
+     }
+  if(choice==2)
+     {
+
+    cout<<"Enter Number of rows: ";
+    cin>>num;
+    cout<<"Number of shapes: ";
+    cin>>num1;
+   for(int i=1;i<=num1;i++)
+   {
+    for(int i=1;i<=num;i++)
+    {
+  
+    for(int k=1;k<=i;k++)
+    {
+    cout<<"*";
+    }
+
+
+cout<<endl;
+
+    }
+
+cout<<"\t\t"<<endl;
+   }
+    system("pause");
+   goto start;
+     }
+
+}

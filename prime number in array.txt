@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std; 
+int main()
+{
+
+ int n;
+ int chk=0,prime=0;
+ cout<<"Enter length of arry :";
+ cin>>n;
+ int arr[n];
+ for(int i=0;i<n;i++)
+ {
+    cin>>arr[i];
+ }
+ 
+  for(int k=0;k<n;k++)
+   {
+    if(arr[k]<2)
+    {
+        continue;
+    }
+       for(int i=2;i*i<arr[k];i++)
+        {
+    
+        
+            if(arr[k]%i==0)
+            {
+                chk++; 
+               break;
+            }
+             
+        }
+         if(chk==0&&arr[k]!=1)
+         prime++;
+         
+    }
+    cout<<" The number of prime numbers in array is: "<<prime;
+}
