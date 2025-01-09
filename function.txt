@@ -1,0 +1,59 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+void sort (int n,vector<int>&arr)
+{
+
+  
+
+  for(int i=0;i<n;i++)
+  {
+    for(int j=i+1;j<n;j++)
+    {
+      if(arr[i]>arr[j])
+      {
+        int temp=arr[j];
+        arr[j]=arr[i];
+        arr[i]=temp;
+      }
+    }
+  }
+for(int i=0;i<n;i++)
+{
+  cout<<arr[i]<<" ";
+}
+};
+  
+
+int main()
+{
+
+start:
+system("color A9");
+int num;
+cout<<"Enter length of array: ";
+cin>>num;
+vector<int>arry(num);
+cout<<"Enter any value of array: ";
+for(int i=0;i<num;i++)
+{
+  cin>>arry[i];
+}
+ 
+sort(num,arry);
+cout<<sort;
+cout<<endl;
+system("pause");
+goto start;
+}
+
+
+
+
+
+
+
+
+
+
+
