@@ -1,0 +1,238 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arrR[5];
+     int arrM[5];
+     for(int i=0;i<5;i++)
+     {
+        cout<<"Enter your Roll number: ";
+        cin>>arrR[i];
+        cout<<"ENter your marks: ";
+        cin>>arrM[i];
+        }
+        if(arrM[0]>arrM[1]&&arrM[0]>arrM[2]&&arrM[0]>arrM[3]&&arrM[0]>arrM[4])
+        {
+            cout<<"The Roll number "<<arrR[0]<<" Having highest marks "<<arrM[0]<<endl;
+        }
+        if(arrM[1]>arrM[0]&&arrM[1]>arrM[2]&&arrM[1]>arrM[3]&&arrM[1]>arrM[4])
+        {
+            cout<<"The Roll number "<<arrR[1]<<" Having highest marks "<<arrM[1]<<endl;
+        }
+        if(arrM[2]>arrM[1]&&arrM[2]>arrM[0]&&arrM[2]>arrM[3]&&arrM[2]>arrM[4])
+        {
+            cout<<"The Roll number "<<arrR[2]<<" Having highest marks "<<arrM[2]<<endl;
+        }
+        if(arrM[3]>arrM[1]&&arrM[3]>arrM[2]&&arrM[3]>arrM[0]&&arrM[3]>arrM[4])
+        {
+            cout<<"The Roll number "<<arrR[3]<<" Having highest marks "<<arrM[3]<<endl;
+        }
+        if(arrM[4]>arrM[1]&&arrM[4]>arrM[2]&&arrM[4]>arrM[3]&&arrM[4]>arrM[0])
+        {
+            cout<<"The Roll number "<<arrR[4]<<" Having highest marks "<<arrM[4]<<endl;
+        }
+     }
+============================================================================================================================================
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arrN[9];
+    int arrS[9];
+    int arrC[9];
+    int sum;
+    
+     cout<<"Enter any number: ";
+     //for taking valuse from user
+    for(int i=0;i<=9;i++)
+    {
+       
+        cin>>arrN[i];
+    }
+    //Printing array values 
+       for(int j=0;j<=9;j++)
+    {
+        cout<<arrN[j]<<" ";
+    }
+    cout<<endl;
+    //printing squre values
+    for(int j=0;j<=9;j++)
+    {
+        arrS[j]=arrN[j]*arrN[j];
+        cout<< arrS[j]<<" ";
+        
+    }
+    cout<<endl;
+    //printing cube values
+    for(int j=0;j<=9;j++)
+    {
+        arrC[j]=arrN[j]*arrN[j]*arrN[j];
+        cout<< arrC[j]<<" ";
+        
+    }
+       cout<<endl;
+       //printing sum of ArrN,ArrS,ArrC
+       for(int j=0;j<=9;j++)
+    {
+     sum=arrS[j]+arrC[j]+arrN[j];
+     }
+     cout<<endl;
+    cout<<sum;
+    
+      
+     }
+
+
+==========================================================================================================
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string name[2];
+    int salary[2];
+    for(int i=0;i<=2;i++)
+    {
+        cout<<"Enter your name of "<<i<<" Emp: ";
+        cin>>name[i];
+        cout<<"Enter your salary "<<i<<" Emp: ";
+        cin>>salary[i];
+    }
+      for(int j=0;j<=2;j++)
+      {
+        if(salary[j]>=250000)
+        {
+            cout<<"Name is: "<<name[j]<<endl;
+            cout<<"Salary is: "<<salary[j]<<endl;
+            cout<<"Tax to be Paid......";
+        }
+        else
+        {
+        cout<<"Name is: "<<name[j]<<endl;
+            cout<<"Salary is: "<<salary[j]<<endl;
+            cout<<"NO Tax to be Paid......";
+        }
+      }
+      
+     }
+
+=========================================================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numStudents;
+    cout << "Enter the number of students: ";
+    cin >> numStudents;
+
+    int arrR[numStudents]; 
+    int arrM[numStudents]; 
+    int primeRollNumbers[numStudents]; 
+    int primeCount = 0;
+    for (int i = 0; i < numStudents; i++) {
+        cout << "Enter Roll number for student " << (i + 1) << ": ";
+        cin >> arrR[i];
+        cout << "Enter Marks for student " << (i + 1) << ": ";
+        cin >> arrM[i];
+    }
+    for (int i = 0; i < numStudents; i++) {
+        int marks = arrM[i];
+        bool isPrime = true;
+
+        if (marks <= 1) {
+            isPrime = false; 
+        } else {
+            for (int j = 2; j * j <= marks; j++) {
+                if (marks % j == 0) {
+                    isPrime = false; 
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            primeRollNumbers[primeCount] = arrR[i]; 
+            primeCount++; 
+        }
+    }
+
+    cout << "Total number of students with prime marks: " << primeCount << endl;
+    if (primeCount > 0) {
+        cout << "Roll numbers of students with prime marks: ";
+        for (int i = 0; i < primeCount; i++) {
+            cout << primeRollNumbers[i] << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No students have prime marks." << endl;
+    }
+
+    return 0;
+}
+==========================================================================================
+#include <iostream>
+using namespace std;
+
+int main() {
+     int numEmployees = 10; 
+    float monthlySalaries[numEmployees]; 
+
+    for (int i = 0; i < numEmployees; i++) {
+        cout << "Enter the name of employee " << (i + 1) << ": ";
+        cin >> names[i];
+        cout << "Enter the monthly salary of " << names[i] << ": ";
+        cin >> monthlySalaries[i];
+    }
+    for (int i = 0; i < numEmployees; i++) {
+        double annualSalary = monthlySalaries[i] * 12; 
+        cout << "Employee Name: " << names[i] << ", Monthly Salary: Rs " << monthlySalaries[i] << ", ";
+
+        if (annualSalary >= 250000) {
+            cout << "Tax to be paid." << endl; 
+        } else {
+            cout << "No tax." << endl; 
+        }
+    }
+
+    return 0;
+}
+===============================================================================================
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 10; 
+    int arr[size]; 
+    int count[size] = {0}; 
+    bool counted[size] = {false};
+    cout << "Enter 10 integers: " << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < size; i++) {
+        if (!counted[i]) {
+            int occurrences = 1; 
+            for (int j = i + 1; j < size; j++) {
+                if (arr[i] == arr[j]) {
+                    occurrences++;
+                    counted[j] = true; 
+                }
+            }
+            cout << arr[i] << " is stored " << occurrences << " time(s) in the array." << endl;
+        }
+    }
+
+    return 0;
+}
+========================================================================================
+
+
+
+
+
+
+
+
+
+
